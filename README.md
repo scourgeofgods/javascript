@@ -1,0 +1,2 @@
+# javascriptProject
+Basic Script Codes

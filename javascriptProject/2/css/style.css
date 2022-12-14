@@ -1,0 +1,175 @@
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Css Reset */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  scroll-behaviour: smooth;
+}
+
+:root {
+  font-size: 62.5%;
+  /* Font Family */
+  --font-family-title: 'Inter', sans-serif;
+  --font-family-content: 'Roboto', sans-serif;
+  /* Dynamic Font Size */
+  --font-size-d-lc: calc(3rem + 3.5vw);
+  --font-size-d-l: calc(3rem + 3vw);
+  --font-size-d-mc: calc(2rem + 2vw);
+  --font-size-d-m: calc(1rem + 1.5vw);
+  --font-size-d-s: calc(1rem + 1vw);
+  /* Static Font Size */
+  --font-size-st-xl: 4rem;
+  --font-size-st-lc: 3.5rem;
+  --font-size-st-l: 3rem;
+  --font-size-st-mc: 2.5rem;
+  --font-size-st-m: 2rem;
+  --font-size-st-sc: 1.5rem;
+  --font-size-st-s: 1rem;
+  /*Colors*/
+  --color-primary-1: #dbeafe;
+  --color-primary-2: #bfdbfe;
+  --color-primary-3: #93c5fd;
+  --color-primary-4: #60a5fa;
+  --color-primary-5: #3b82f6;
+  --color-primary-6: #2563eb;
+  --color-primary-7: #1d4ed8;
+  --color-primary-8: #1e40af;
+  --color-primary-9: #1e3a8a;
+  --color-secondary: #f8fafc;
+  --color-secondary-1: #f1f5f9;
+  --color-secondary-2: #e2e8f0;
+  --color-secondary-3: #cbd5e1;
+  --color-secondary-4: #94a3b8;
+  --color-secondary-5: #64748b;
+  --color-secondary-6: #475569;
+  --color-secondary-7: #334155;
+  --color-secondary-8: #1e293b;
+  --color-secondary-9: #0f172a;
+  /* Horizontal Padding Dynamic */
+  --padding-d-l-h: calc(2rem + 12vw);
+  --padding-d-mc-h: calc(1rem + 4vw);
+  --padding-d-m-h: calc(1rem + 2vw);
+  --padding-d-s-h: calc(1rem + 1vw);
+  --padding-d-xs-h: calc(0.5rem + 1vw);
+  /* Horizontal Padding Static */
+  --padding-st-l-h: 3rem;
+  --padding-st-m-h: 2.5rem;
+  --padding-st-s-h: 2rem;
+  /* Vertical Padding Dynamic*/
+  --padding-d-l-v: calc(2rem + 12vh);
+  --padding-d-mc-v: calc(1rem + 4vh);
+  --padding-d-m-v: calc(1rem + 2vh);
+  --padding-d-s-v: calc(1rem + 1vh);
+  --padding-d-xs-v: calc(0.5rem + 1vh);
+  /* Vertical Padding Static */
+  --padding-st-l-v: 2rem;
+  --padding-st-m-v: 1.5rem;
+  --padding-st-s-v: 1rem;
+  --padding-st-xs-v: .5rem;
+}
+
+body {
+  background-color: var(--color-primary-1);
+  font-family: var(--font-family-content);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 1rem;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Utility Classes */
+
+/* Section padding values */
+
+
+.sec__padd {
+  padding: var(--padding-d-l-v) var(--padding-d-l-h);
+}
+
+.sec__title {
+  font-size: var(--font-size-d-s);
+  font-weight: 900;
+}
+
+.sec__para {
+  font-size: var(--font-size-d-sc);
+  color: var(--color-secondary-9);
+}
+.sec__flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+  padding: var(--padding-st-xs-v) var(--padding-d-xs-h);
+  background-color: var(--color-primary-9);
+  color: var(--color-primary-1);
+  font-size: var(--font-size-d-s);
+  outline: none;
+  border:1px;
+  border-radius: 2rem;
+  transition: all .25s ease-in-out;
+  
+}
+.btn:hover{
+  background-color: var(--color-primary-1);
+  color: var(--color-primary-9);
+  box-shadow: 1px 2px 1px  var(--color-primary-9);
+}
+
+.container {
+  display: grid;
+  grid-template-columns:
+    [container-start] repeat(12, minmax(min-content, 12.8rem))
+    [container-end];
+    justify-content: center;
+    
+}
+
+.layout {
+  grid-column: container-start/container-end;
+}
+
+.counter{
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  gap: 2rem;
+}
+.counter__title{
+font-size: var(--font-size-d-mc);
+color: var(--color-primary-6);
+}
+.counter__value{
+  font-size: var(--font-size-d-mc);
+  font-weight: 600;
+}
+.counter__btns{
+margin-right: 1rem;
+}
